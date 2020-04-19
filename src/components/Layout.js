@@ -10,7 +10,7 @@ const TemplateWrapper = ({ footerData = null, navbarData = null, children }) => 
   <div>
     <Helmet>
       <html lang="en" />
-      <meta name="keywords" content="montreal, javascript, programming, meetup" />
+      <meta name="keywords" content="syracuse, developer, meetups, mentors, nonprofit" />
     </Helmet>
     <Navbar data={navbarData} />
     <main>{children}</main>

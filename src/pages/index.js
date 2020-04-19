@@ -24,54 +24,10 @@ export const HomePageTemplate = ({ home, upcomingMeetup = null }) => {
           </h3>
         </div>
       </section>
-      <section className="upcomingMeetup  section">
-        <div className="upcomingMeetup-container  container">
-          <h2 className="upcomingMeetup-title">{home.upcomingMeetupHeading}</h2>
-          {upcomingMeetup ? (
-            <>
-              <p className="upcomingMeetup-detail  upcomingMeetup-detail--date">
-                <span className="upcomingMeetup-detailLabel">Date: </span>
-                {upcomingMeetup.formattedDate}
-              </p>
-              <p className="upcomingMeetup-detail  upcomingMeetup-detail--location">
-                <span className="upcomingMeetup-detailLabel">Location: </span>
-                {upcomingMeetup.location.name}
-              </p>
-              {presenters.length > 0 && (
-                <div className="upcomingMeetup-presenters">
-                  {presenters.map(presenter => (
-                    <div className="upcomingMeetup-presenter" key={presenter.text}>
-                      <img
-                        className="upcomingMeetup-presenterImage"
-                        src={presenter.image ? presenter.image : HeadshotPlaceholder}
-                        alt={presenter.image ? presenter.name : "Default headshot placeholder"}
-                      />
-                      <span className="upcomingMeetup-presenterName">{presenter.name}</span>
-                      <span className="upcomingMeetup-presenterPresentationTitle">
-                        {presenter.presentationTitle}
-                      </span>
-                      <p className="upcomingMeetup-presenterDescription">{presenter.text}</p>
-                    </div>
-                  ))}
-                </div>
-              )}
-              <p className="upcomingMeetup-mapNote">{home.mapsNote}</p>
-              <div className="upcomingMeetup-mapWrapper">
-                <Map
-                  isMarkerShown
-                  googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTxauB_VWpo0_8hWELlE3pN59uuHzxD-8&v=3.exp&libraries=geometry,drawing,places"
-                  loadingElement={<div style={{ height: `100%` }} />}
-                  containerElement={<div style={{ height: `100%` }} />}
-                  mapElement={<div style={{ height: `100%` }} />}
-                  link={upcomingMeetup.location.mapsLink}
-                  latitude={latitude}
-                  longitude={longitude}
-                />
-              </div>
-            </>
-          ) : (
-            <p className="upcomingMeetup-detail">{home.noUpcomingMeetupText}</p>
-          )}
+      <section className="section upcomingMeetup">
+        <div className="container home-container">
+          <p><span>CODES is on a mission to serve and grow the technology community in Syracuse, New York through education, mentoring, and economic opportunity creation.</span></p>
+          <p>Our vision is to see local opportunity matched with best in class local talent in order to grow a sustainable and vibrant tech scene in Central New York.</p>
         </div>
       </section>
       <section className="ctaBlock">

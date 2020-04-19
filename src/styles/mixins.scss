@@ -42,9 +42,9 @@ $breakpoints: (
   line-height: 1.5rem;
 
   @include respond-to("small") {
-    font-size: 1.25rem;
+    font-size: 1.6rem;
     letter-spacing: 1px;
-    line-height: 1.75rem;
+    line-height: 1.95rem;
   }
 }
 

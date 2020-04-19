@@ -3,26 +3,25 @@ templateKey: home-page
 headerImage:
   image: /img/television.png
   imageAlt: JavaScript Wakanda
-title: Meet other JavaScript Developers in Wakanda
-upcomingMeetupHeading: Upcoming Meetup
+title: Coalition of Digital Engagements in Syracuse
+upcomingMeetupHeading: Is on a mission to serve and grow the technology community in Syracuse, New York through education, mentoring, and economic opportunity creation.
 noUpcomingMeetupText: Details to be announced.
 mapsNote: Clicking the pin opens Google Maps in a new tab.
 callToActions:
   firstCTA:
-    heading: Past Meetups
+    heading: Find or be a mentor
     linkType: internal
     linkURL: /meetups
-    subHeading: Look at what topics were presented at past meetups.
+    subHeading: Find out more about our mentorship program and sign up.
   secondCTA:
-    heading: Volunteer to Present
-    linkType: external
-    linkURL: 'mailto:contact@js-wakanda.org'
-    subHeading: Want to present at an upcoming meetup? Contact us.
+    heading: Need website or tech help?
+    linkType: internal
+    linkURL: /meetups
+    subHeading: Learn more if you're a small business or nonprofit in Syracuse.
 seo:
-  browserTitle: JS Wakanda
+  browserTitle: CODES
   description: >-
-    JavaScript meetup group in Wakanda where JavaScript developers get together
-    for presentations and to meet others in the community.
-  title: JavaScript Wakanda
+    CODES is an organization supporting the Syracuse technology community through education, mentoring, and creating economic opportunity.
+  title: Coalition of Digital Engagements in Syracuse
 ---
 
