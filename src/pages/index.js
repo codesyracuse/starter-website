@@ -96,18 +96,6 @@ export const pageQuery = graphql`
             vision
             formattedDate: date(formatString: "MMMM Do YYYY @ h:mm A")
             rawDate: date
-            presenters {
-              name
-              image
-              text
-              presentationTitle
-            }
-            location {
-              mapsLatitude
-              mapsLongitude
-              mapsLink
-              name
-            }
           }
         }
       }
@@ -124,9 +112,6 @@ export const pageQuery = graphql`
               image
               imageAlt
             }
-            upcomingMeetupHeading
-            noUpcomingMeetupText
-            mapsNote
             callToActions {
               firstCTA {
                 heading
