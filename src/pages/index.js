@@ -2,18 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Helmet from "react-helmet";
-import isAfter from "date-fns/is_after";
-
 import Layout from "../components/Layout";
-import Map from "../components/Map";
-import HeadshotPlaceholder from "../img/headshot-placeholder.svg";
 import CustomLink from "../components/CustomLink";
 import "../styles/home.scss";
 
-export const HomePageTemplate = ({ home, upcomingMeetup = null }) => {
-  const presenters = upcomingMeetup && upcomingMeetup.presenters;
-  const latitude = upcomingMeetup && parseFloat(upcomingMeetup.location.mapsLatitude);
-  const longitude = upcomingMeetup && parseFloat(upcomingMeetup.location.mapsLongitude);
+export const HomePageTemplate = ({ home }) => {
   return (
     <>
       <section className="header">
@@ -26,8 +19,8 @@ export const HomePageTemplate = ({ home, upcomingMeetup = null }) => {
       </section>
       <section className="section upcomingMeetup">
         <div className="container home-container">
-          <p><span>CODES is on a mission to serve and grow the technology community in Syracuse, New York through education, mentoring, and economic opportunity creation.</span></p>
-          <p>Our vision is to see local opportunity matched with best in class local talent in order to grow a sustainable and vibrant tech scene in Central New York.</p>
+          <p><span>{home.mission}</span></p>
+          <p>{home.vision}</p>
         </div>
       </section>
       <section className="ctaBlock">
@@ -66,17 +59,6 @@ class HomePage extends React.Component {
     const {
       seo: { title: seoTitle, description: seoDescription, browserTitle },
     } = home;
-    let upcomingMeetup = null;
-    // Find the next meetup that is closest to today
-    data.allMarkdownRemark.edges.every(item => {
-      const { frontmatter: meetup } = item.node;
-      if (isAfter(meetup.rawDate, new Date())) {
-        upcomingMeetup = meetup;
-        return true;
-      } else {
-        return false;
-      }
-    });
     return (
       <Layout footerData={footerData} navbarData={navbarData}>
         <Helmet>
@@ -84,7 +66,7 @@ class HomePage extends React.Component {
           <meta name="description" content={seoDescription} />
           <title>{browserTitle}</title>
         </Helmet>
-        <HomePageTemplate home={home} upcomingMeetup={upcomingMeetup} />
+        <HomePageTemplate home={home} />
       </Layout>
     );
   }
@@ -110,6 +92,8 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             title
+            mission
+            vision
             formattedDate: date(formatString: "MMMM Do YYYY @ h:mm A")
             rawDate: date
             presenters {
@@ -134,6 +118,8 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             title
+            mission
+            vision
             headerImage {
               image
               imageAlt
