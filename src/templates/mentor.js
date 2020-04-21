@@ -49,28 +49,6 @@ export const MentorTemplate = props => {
         <ReactMarkdown source={page.frontmatter.forMentors} />
         </div>
       </section>
-      <section className="section  developerGroups  about-developerGroups">
-        <div className="container">
-          <h2>What we offer</h2>
-        </div>
-      </section>
-      <section className="section  organizers  about-organizers">
-        <div className="container  organizers-container">
-          <h2 className="organizers-title">{page.frontmatter.organizers.title}</h2>
-          <ul className="organizers-list">
-            {page.frontmatter.organizers.gallery.map((galleryImage, index) => (
-              <li key={index} className="organizers-listItem">
-                <img
-                  className="organizers-listItemImage"
-                  src={galleryImage.image}
-                  alt={galleryImage.imageAlt}
-                />
-                <span className="organizers-listItemName">{galleryImage.name}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
     </article>
   );
 };

@@ -13,7 +13,7 @@ callToActions:
   firstCTA:
     heading: Find or be a mentor
     linkType: internal
-    linkURL: /meetups
+    linkURL: /mentor
     subHeading: Find out more about our mentorship program and sign up.
   secondCTA:
     heading: Need website or tech help?

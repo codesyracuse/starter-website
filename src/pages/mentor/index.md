@@ -14,16 +14,23 @@ gallery:
 forTrainees: |-
   ## For Trainees
 
-  * for anyone who has never coded.
-  * for anyone who has college education comp sci or related.
-  * for anyone who has a coding bootcamp certificate.
-  * for anyone who has dabbled with code on their own.
-  * Requirements: live in CNY, be over 18, have 30 minutes a week.
+  ### Who qualifies:
+  * anyone who has college education comp sci or related.
+  * anyone who has a coding bootcamp certificate.
+  * anyone who has dabbled with code on their own.
+  * anyone who has never coded.  
+  ### Requirements:
+  * Live in the Syracuse area
+  * 18 or older
+  * Have 30 minutes a week
+  
 forMentors: |-
   ## For Mentors
 
-  * Qualification: know more than your trainee
-  * Requirement: be over 18
+  * To Qualify: Know more than your trainee.
+  * Requirement: 18 or older.   
+
+  When you fill out the mentor form, we make a match with a trainee based on your skills and experience. Whether you have two years of experience, or twenty, we'll match you with a trainee that makes sense. 
 developerGroups: |-
   ## For Trainees
 
@@ -49,6 +56,12 @@ seo:
     the community.
   title: About | JS Wakanda
 ---
-## Grow as a Developer: Hero Path Training
+## Grow as a Developer
 
-The training and mentoring we offer is about the improvement of skills as a developer or software engineer. Less like job training and more like gym training. Everyone wants to make progress, and there is only one way to do it: put in your reps. CODES provides structure and resources to help trainees on their learning path and mentors grow as developers and leaders.
+This is about the improvement of skills as a developer or software engineer. Less like job training and more like gym training. Everyone wants to make progress, and there is only one way to do it: put in your reps. 
+
+
+* We help match mentors with trainees.
+* Aim for 30 minute weekly or biweekly meetings, virtual or in-person. 
+* We expect an initial 6-week commitment that can be extended.
+* But you are under no obligation to continue with a specific person if it's not working out.
